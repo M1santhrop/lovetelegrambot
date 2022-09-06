@@ -22,39 +22,25 @@ public class GenerateRandomComplimentJob {
 
     @Scheduled(cron = "${bot.morningTime}")
     public void sendRandomComplimentInTheMorning() {
-        LocalDateTime start = LocalDateTime.now();
-        log.info("Send random compliments job started.");
-
-        sendRandomCompliments.sendRandomCompliments();
-
-        LocalDateTime end = LocalDateTime.now();
-        log.info("Send random compliments job finished. Took seconds: {}", end.toEpochSecond(ZoneOffset.UTC) - start.toEpochSecond(ZoneOffset.UTC));
+        runSendRandomComplimentJob();
     }
 
     @Scheduled(cron = "${bot.middayTime}")
     public void sendRandomComplimentInTheMidday() {
-        LocalDateTime start = LocalDateTime.now();
-        log.info("Send random compliments job started.");
-
-        sendRandomCompliments.sendRandomCompliments();
-
-        LocalDateTime end = LocalDateTime.now();
-        log.info("Send random compliments job finished. Took seconds: {}", end.toEpochSecond(ZoneOffset.UTC) - start.toEpochSecond(ZoneOffset.UTC));
+        runSendRandomComplimentJob();
     }
 
     @Scheduled(cron = "${bot.eveningTime}")
     public void sendRandomComplimentInTheEvening() {
-        LocalDateTime start = LocalDateTime.now();
-        log.info("Send random compliments job started.");
-
-        sendRandomCompliments.sendRandomCompliments();
-
-        LocalDateTime end = LocalDateTime.now();
-        log.info("Send random compliments job finished. Took seconds: {}", end.toEpochSecond(ZoneOffset.UTC) - start.toEpochSecond(ZoneOffset.UTC));
+        runSendRandomComplimentJob();
     }
 
     @Scheduled(cron = "${bot.nightTime}")
     public void sendRandomComplimentInTheNight() {
+        runSendRandomComplimentJob();
+    }
+    
+    private void runSendRandomComplimentJob() {
         LocalDateTime start = LocalDateTime.now();
         log.info("Send random compliments job started.");
 

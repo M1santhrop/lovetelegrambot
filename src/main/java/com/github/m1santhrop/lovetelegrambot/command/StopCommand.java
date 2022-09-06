@@ -1,7 +1,6 @@
 package com.github.m1santhrop.lovetelegrambot.command;
 
 import static com.github.m1santhrop.lovetelegrambot.exception.ExceptionSender.throwNotFoundUserException;
-import com.github.m1santhrop.lovetelegrambot.exception.ExceptionSender;
 import com.github.m1santhrop.lovetelegrambot.service.SendBotMessageService;
 import com.github.m1santhrop.lovetelegrambot.service.TelegramUserService;
 import lombok.AllArgsConstructor;
